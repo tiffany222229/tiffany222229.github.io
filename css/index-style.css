@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.a,
+.b,
+.c,
+.d,
+.e,
+.f,
+.g {
+    border: 1px solid;
+    height: 200px;
+    text-align: center;
+    float: left;
+}
+
+.a {
+    width: 100%;
+}
+
+.b {
+    width: 50%;
+}
+
+.c,
+.d {
+    width: 25%;
+}
+
+.e,
+.f,
+.g {
+    width: 33.33%;
+}
+
+@media screen and (max-width:768px) {
+    .b,
+    .c,
+    .d,
+    .e,
+    .f,
+    .g {
+        width: 100%
+    }
+}
