@@ -52,9 +52,11 @@
                 <img src="img/憤怒鳥-FB-1.jpg" alt>
                 <img src="img/kitty-shabu-2.jpg" alt>
                 <img src="img/醜比頭-fb-1.jpg" alt>
-
             </figure>
         </div>
+
+        <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+        <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
 
         <div>
             <ul class="card-list">
@@ -70,7 +72,8 @@
                 </li>
 
                 <li class="card">
-                    <a class="card-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-500.jpg">
+                    <a class="card-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);"
+                        data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-500.jpg">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
                     </a>
                     <a class="card-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
@@ -80,7 +83,8 @@
                 </li>
 
                 <li class="card">
-                    <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
+                    <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);"
+                        data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
                     </a>
                     <a class="card-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
@@ -90,7 +94,8 @@
                 </li>
 
                 <li class="card">
-                    <a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+                    <a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);"
+                        data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
                     </a>
                     <a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
@@ -101,8 +106,8 @@
 
             </ul>
         </div>
-        <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
-        <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span></div>
+        
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -122,7 +127,7 @@
         }
 
 
-        $('.open-overlay').click(function() {
+        $('.open-overlay').click(function () {
             var overlay_navigation = $('.overlay-navigation'),
                 nav_item_1 = $('nav li:nth-of-type(1)'),
                 nav_item_2 = $('nav li:nth-of-type(2)'),
@@ -163,7 +168,7 @@
         // - (event listeners, forEach loop)
 
         // wait for the entire page to finish loading
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
 
             // setTimeout to simulate the delay from a real page load
             setTimeout(lazyLoad, 1000);
@@ -174,7 +179,7 @@
             var card_images = document.querySelectorAll('.card-image');
 
             // loop over each card image
-            card_images.forEach(function(card_image) {
+            card_images.forEach(function (card_image) {
                 var image_url = card_image.getAttribute('data-image-full');
                 var content_image = card_image.querySelector('img');
 
@@ -182,7 +187,7 @@
                 content_image.src = image_url;
 
                 // listen for load event when the new photo is finished loading
-                content_image.addEventListener('load', function() {
+                content_image.addEventListener('load', function () {
                     // swap out the visible background image with the new fully downloaded photo
                     card_image.style.backgroundImage = 'url(' + image_url + ')';
                     // add a class to remove the blur filter to smoothly transition the image change
