@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *,
+         :before,
+         :after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            background-color: skyblue;
+        }
+
+
+
+        .transitions {
+            width: 100%;
+            position: relative;
+        }
+        /* .col-md-1 {
+            height: 550px;
+            width: 100%;
+            border: 5px solid;
+            box-sizing: border-box;
+        } */
+
+        .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        }
+
+        .cards {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        padding: 1.5%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+
+        .card {
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+        background: #fefff9;
+        color: #363636;
+        text-decoration: none;
+        -moz-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+        box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        }
+        @media (max-width: 700px) {
+        .card {
+            width: 100%;
+        }
+        }
+        @media (min-width: 700px) {
+        .card {
+            max-width: 320px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .card:nth-child(even) {
+            margin-right: 0;
+        }
+        }
+        @media (min-width: 980px) {
+        .card:nth-child(even) {
+            margin-right: 20px;
+        }
+        .card:nth-child(3n) {
+            margin-right: 0;
+        }
+        }
+        .card span {
+        display: block;
+        }
+        .card .card-summary {
+        padding: 5% 5% 3% 5%;
+        }
+        .card .card-header {
+        position: relative;
+        height: 175px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0% 95%;
+        background-color: rgba(255, 255, 255, 0.15);
+        background-blend-mode: overlay;
+        -moz-border-radius: 4px 4px 0 0;
+        -webkit-border-radius: 4px;
+        border-radius: 4px 4px 0 0;
+        }
+        .card .card-header:hover, .card .card-header:focus {
+        background-color: rgba(255, 255, 255, 0);
+        }
+        .card .card-title {
+        background: rgba(157, 187, 63, 0.85);
+        padding: 3.5% 0 2.5% 0;
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        }
+        .card .card-title h3 {
+        font-size: 1.2em;
+        line-height: 1.2;
+        padding: 0 3.5%;
+        margin: 0;
+        }
+        .card .card-meta {
+        max-height: 0;
+        overflow: hidden;
+        color: #666;
+        font-size: .78em;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 5%;
+        padding: 0 5%;
+        -moz-transition-property: max-height;
+        -o-transition-property: max-height;
+        -webkit-transition-property: max-height;
+        transition-property: max-height;
+        -moz-transition-duration: 0.4s;
+        -o-transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -moz-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        }
+        .card:hover, .card:focus {
+        background: white;
+        -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+        }
+        .card:hover .card-title, .card:focus .card-title {
+        background: rgba(157, 187, 63, 0.95);
+        }
+        .card:hover .card-meta, .card:focus .card-meta {
+        max-height: 1em;
+        }
+
+        img {
+        max-width: 100%;
+        }
+
+        body {
+        background: #f0f0f0;
+        font-size: 17px;
+        line-height: 1.4;
+        font-family: 'Jaldi', sans-serif;
+        }
+
+        * {
+        -moz-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -moz-transform;
+        -o-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -o-transform;
+        -webkit-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -webkit-transform;
+        transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        }
+
+
+        .a1 {
+            width: 100%;
+            height: 500px;
+            background-image: url("http://www.lotong.gov.tw/uploadfile/20170525161124543.jpg");
+            background-size: cover;
+        }
+
+        .a2 {
+            width: 100%;
+            height: 500px;
+            background-image: url("http://ntpctourcdn.azureedge.net/Content/Upload/Calendar/69b1cb93-09ef-4dcc-b6bd-8c99991b093e.jpg");
+            background-size: cover;
+        }
+
+        .a3 {
+            width: 100%;
+            height: 500px;
+            background-image: url("http://mmmfile.emmm.tw/mmnews/hsinchu/image/201703241139120.jpg");
+            background-size: cover;
+        }
+    </style>
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+    <div class="transitions">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <div class="a1"></div>
+
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="a2"></div>
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="a3"></div>
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cards">
+            <a class="card" href="http://skylantern.ntpc.gov.tw/">
+			<span class="card-header" style="background-image: url(http://travel.chiayi.gov.tw/upload/12/s1_2017011810214867648.jpg);">
+				<span class="card-title">
+					<h3>2017平溪天燈節活動</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				已有百年曆史的台灣新北市平溪天燈節，是為了慶祝元宵節而舉辦的節慶活動。每年元宵節前後，都吸引十多萬遊人前來共襄盛舉，...
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+		</a>
+
+            <a class="card" href="https://www.eventaiwan.tw/tw/news/detail_10202_601">
+			<span class="card-header" style="background-image: url(http://ntpctourcdn.azureedge.net/Content/Upload/Calendar/69b1cb93-09ef-4dcc-b6bd-8c99991b093e.jpg);">
+				<span class="card-title">
+					<h3>2017新北市客家桐花祭系列活動</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				新北市桐花祭活動，自民國86年第一屆土城朝山桐花節起，歷經20年的推廣，每年4-5月間的桐花季節，成為本市年度重要的文化觀光節慶活動之一...
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+		</a>
+
+            <a class="card" href="http://www.yicfff.tw/">
+			<span class="card-header" style="background-image: url(http://www.lotong.gov.tw/uploadfile/20170525161124543.jpg);">
+				<span class="card-title">
+					<h3>2017宜蘭國際童玩藝術節</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				7月1日至8月13日的上午8點30分到晚上8點30分，總共44天；讓2017 宜蘭國際童玩藝術節，成為你美好的記憶拼圖的其中一塊。
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+		</a>
+
+            <a class="card" href="http://www.erv-nsa.gov.tw/user/Article.aspx?Lang=1&SNo=03013608">
+			<span class="card-header" style="background-image: url(http://www.erv-nsa.gov.tw/userfiles/image/2017%E7%BE%85%E5%B1%B1%E9%AB%94%E9%A9%97%E6%B4%BB%E5%8B%95-1.jpg);">
+				<span class="card-title">
+					<h3>2017花東縱谷「體驗活動－往羅高手」來囉！！</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				花蓮最南端的富里鄉，擁有豐富的自然資源，人文薈萃羅山村更是全國第一個「有機村」！我們將在2017年推出滿滿的體驗...
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+		</a>
+
+            <a class="card" href="http://events.2017.taipei/activity/activity_20170731.html#A01">
+			<span class="card-header" style="background-image: url(http://events.2017.taipei/images/title-one-banner12.jpg);">
+				<span class="card-title">
+					<h3>世大運公園好好玩</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				2017世大運即將在台北展開各項運動競賽！因應運動會而舉辦的「世大運公園」活動則提前在8/18於花博公園登場，活動期間將規劃創意多元...
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+		</a>
+
+
+
+
+
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -60,7 +60,8 @@
         .title1 {
             letter-spacing: 2px;
             text-align: right;
-            font-size: 25px;
+            font-size: 23px;
+            font-weight: bolder;
             padding: 20px;
             height: 250px;
             width: 100%;
@@ -68,6 +69,22 @@
             position: absolute;
             top: 100px;
             right: 280px
+            
+        }
+
+            .title2 {
+            letter-spacing: 2px;
+            text-align: right;
+            font-size: 23px;
+            font-weight: bolder;
+            padding: 20px;
+            height: 250px;
+            width: 100%;
+            border: 5px solid white;
+            position: absolute;
+            top: 100px;
+            right: 280px
+            
         }
 
         .img1 {
@@ -82,6 +99,20 @@
             z-index: 1;   /*使圖片置後於標題框*/
         }
 
+
+        .img2 {
+            position: absolute;
+            left: 30%;
+            top: 130px;
+            height: 400px;
+            width: 50%;
+            background-image: url("http://ws.e-land.gov.tw/001/2015yilan/259/relpic/10181/168357/eb5be1d6-2964-43aa-993b-d4272b55cefb.jpg");
+            background-size: cover;
+            background-position: 40% 40%;
+            z-index: 1;   /*使圖片置後於標題框*/
+        }
+
+
         .content1 {
             letter-spacing: 5px;
             line-height: 25px;
@@ -95,8 +126,29 @@
             font-weight: bolder;
         }
 
-        .col-md-6 {
-            position: relative;
+        .content2 {
+            letter-spacing: 5px;
+            line-height: 25px;
+            width: 70%;
+            background-color: #ccc;
+            text-align: left;
+            position: absolute;
+            top: 260px;
+            right: 130px;
+            color:black;
+            font-weight: bolder;
+        }        
+
+    
+
+        .line{
+             border: 5px solid white;
+             width: 5px;
+             height: 150px;
+             position: absolute;
+             right:200px;
+             top:105px;
+
         }
 
         .a1 {
@@ -183,19 +235,21 @@
     <div class="container">
         <div class="row">
 
-            <div>
-                <div class="col-md-6">
-                    <div class="img1"></div>
+            <div class="col-md-6">
+                <div class="img1"></div>
+                <div class="clearfix"></div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="line"></div>
+                <div class="title1">
+                    2017平溪天燈節活動
                 </div>
-                <div class="col-md-6">
-                    <div class="title1">
-                        2017平溪天燈節活動
-                    </div>
-                    <div class="content1">
-                        已有百年曆史的台灣新北市平溪天燈節，是為了慶祝元宵節而舉辦的節慶活動。每年元宵節前後，都吸引十多萬遊人前來共襄盛舉，數千盞天燈在黑夜中冉冉升空，將每個人的祝福傳遞給上天，燦爛紅光將天空點綴得絢爛迷人。2017新北市平溪天燈節首場主活動將於2月11日元宵節正式登場!
-                    </div>
+                <div class="content1">
+                    已有百年曆史的台灣新北市平溪天燈節，是為了慶祝元宵節而舉辦的節慶活動。每年元宵節前後，都吸引十多萬遊人前來共襄盛舉，數千盞天燈在黑夜中冉冉升空，將每個人的祝福傳遞給上天，燦爛紅光將天空點綴得絢爛迷人。2017新北市平溪天燈節首場主活動將於2月11日元宵節正式登場!
                 </div>
             </div>
+
         </div>
     </div>
 
