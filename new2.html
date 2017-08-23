@@ -18,6 +18,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link href="css/nav.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -44,7 +45,103 @@
             background-color: skyblue;
         }
 
+        .Navigation,
+        {
+            border: 1px solid;
+            /*   width:1920px; */
+            height: 100px;
+        }
 
+        .present-campaign .flow dt {
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .present-campaign .campaign-unit__hdr:before {
+            font-family: 'Poiret One', cursive;
+        }
+        /****************************************************
+ * HOME
+ */
+
+        @-webkit-keyframes infinite {
+            0% {
+                background-position: 0px 0px;
+            }
+            100% {
+                background-position: -1500px 0px;
+            }
+        }
+
+        @-moz-keyframes infinite {
+            0% {
+                background-position: 0px 0px;
+            }
+            100% {
+                background-position: -1500px 0px;
+            }
+        }
+
+        @keyframes infinite {
+            0% {
+                background-position: 0px 0px;
+            }
+            100% {
+                background-position: -1500px 0px;
+            }
+        }
+
+        @-webkit-keyframes logoGradation {
+            0% {
+                background-position: 90% 0%;
+            }
+            50% {
+                background-position: 11% 100%;
+            }
+            100% {
+                background-position: 90% 0%;
+            }
+        }
+
+        @-moz-keyframes logoGradation {
+            0% {
+                background-position: 90% 0%;
+            }
+            50% {
+                background-position: 11% 100%;
+            }
+            100% {
+                background-position: 90% 0%;
+            }
+        }
+
+        @keyframes logoGradation {
+            0% {
+                background-position: 90% 0%;
+            }
+            50% {
+                background-position: 11% 100%;
+            }
+            100% {
+                background-position: 90% 0%;
+            }
+        }
+
+        .menu-trigger {
+            background-image: linear-gradient(45deg, #99fcff 0%, #0fd2c5 36%, #fff56b 100%);
+            background-size: 100% 300%;
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border: none;
+            position: fixed;
+            right: 45px;
+            top: 26px;
+            z-index: 5;
+            cursor: pointer;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
 
         .transitions {
             width: 100%;
@@ -58,179 +155,210 @@
         } */
 
         .container {
-        max-width: 1100px;
-        margin: 0 auto;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .cards {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-top: 15px;
-        padding: 1.5%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            padding: 1.5%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
         .card {
-        position: relative;
-        margin-bottom: 20px;
-        padding-bottom: 30px;
-        background: #fefff9;
-        color: #363636;
-        text-decoration: none;
-        -moz-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
-        box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
-        -moz-border-radius: 4px;
-        -webkit-border-radius: 4px;
-        border-radius: 4px;
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 30px;
+            background: #fefff9;
+            color: #363636;
+            text-decoration: none;
+            -moz-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+            box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
         }
+
         @media (max-width: 700px) {
-        .card {
+            .card {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .card {
+                max-width: 320px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+            .card:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .card:nth-child(even) {
+                margin-right: 20px;
+            }
+            .card:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+
+        .card span {
+            display: block;
+        }
+
+        .card .card-summary {
+            padding: 5% 5% 3% 5%;
+        }
+
+        .card .card-header {
+            position: relative;
+            height: 175px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0% 95%;
+            background-color: rgba(255, 255, 255, 0.15);
+            background-blend-mode: overlay;
+            -moz-border-radius: 4px 4px 0 0;
+            -webkit-border-radius: 4px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .card-header1 {
+            position: relative;
+            height: 175px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0% 0%;
+            background-color: rgba(255, 255, 255, 0.15);
+            background-blend-mode: overlay;
+            -moz-border-radius: 4px 4px 0 0;
+            -webkit-border-radius: 4px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .card .card-header:hover,
+        .card .card-header:focus {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .card .card-title {
+            background: rgba(157, 187, 63, 0.85);
+            padding: 3.5% 0 2.5% 0;
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 0;
             width: 100%;
         }
-        }
-        @media (min-width: 700px) {
-        .card {
-            max-width: 320px;
-            margin-right: 20px;
-            margin-bottom: 20px;
-        }
-        .card:nth-child(even) {
-            margin-right: 0;
-        }
-        }
-        @media (min-width: 980px) {
-        .card:nth-child(even) {
-            margin-right: 20px;
-        }
-        .card:nth-child(3n) {
-            margin-right: 0;
-        }
-        }
-        .card span {
-        display: block;
-        }
-        .card .card-summary {
-        padding: 5% 5% 3% 5%;
-        }
-        .card .card-header {
-        position: relative;
-        height: 175px;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0% 95%;
-        background-color: rgba(255, 255, 255, 0.15);
-        background-blend-mode: overlay;
-        -moz-border-radius: 4px 4px 0 0;
-        -webkit-border-radius: 4px;
-        border-radius: 4px 4px 0 0;
-        }
-        .card .card-header:hover, .card .card-header:focus {
-        background-color: rgba(255, 255, 255, 0);
-        }
-        .card .card-title {
-        background: rgba(157, 187, 63, 0.85);
-        padding: 3.5% 0 2.5% 0;
-        color: white;
-        font-family: 'Roboto Condensed', sans-serif;
-        text-transform: uppercase;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        }
+
         .card .card-title h3 {
-        font-size: 1.2em;
-        line-height: 1.2;
-        padding: 0 3.5%;
-        margin: 0;
+            font-size: 1.2em;
+            line-height: 1.2;
+            padding: 0 3.5%;
+            margin: 0;
         }
+
         .card .card-meta {
-        max-height: 0;
-        overflow: hidden;
-        color: #666;
-        font-size: .78em;
-        text-transform: uppercase;
-        position: absolute;
-        bottom: 5%;
-        padding: 0 5%;
-        -moz-transition-property: max-height;
-        -o-transition-property: max-height;
-        -webkit-transition-property: max-height;
-        transition-property: max-height;
-        -moz-transition-duration: 0.4s;
-        -o-transition-duration: 0.4s;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        -moz-transition-timing-function: ease-in-out;
-        -o-transition-timing-function: ease-in-out;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            color: #666;
+            font-size: .78em;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 5%;
+            padding: 0 5%;
+            -moz-transition-property: max-height;
+            -o-transition-property: max-height;
+            -webkit-transition-property: max-height;
+            transition-property: max-height;
+            -moz-transition-duration: 0.4s;
+            -o-transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            -moz-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
         }
-        .card:hover, .card:focus {
-        background: white;
-        -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
-        box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+
+        .card:hover,
+        .card:focus {
+            background: white;
+            -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
         }
-        .card:hover .card-title, .card:focus .card-title {
-        background: rgba(157, 187, 63, 0.95);
+
+        .card:hover .card-title,
+        .card:focus .card-title {
+            background: rgba(157, 187, 63, 0.95);
         }
-        .card:hover .card-meta, .card:focus .card-meta {
-        max-height: 1em;
+
+        .card:hover .card-meta,
+        .card:focus .card-meta {
+            max-height: 1em;
         }
 
         img {
-        max-width: 100%;
+            max-width: 100%;
         }
 
         body {
-        background: #f0f0f0;
-        font-size: 17px;
-        line-height: 1.4;
-        font-family: 'Jaldi', sans-serif;
+            background: #f0f0f0;
+            font-size: 17px;
+            line-height: 1.4;
+            font-family: 'Jaldi', sans-serif;
         }
 
         * {
-        -moz-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -moz-transform;
-        -o-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -o-transform;
-        -webkit-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -webkit-transform;
-        transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
-        -moz-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-        -webkit-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -moz-transition-timing-function: linear;
-        -o-transition-timing-function: linear;
-        -webkit-transition-timing-function: linear;
-        transition-timing-function: linear;
+            -moz-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -moz-transform;
+            -o-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -o-transform;
+            -webkit-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -webkit-transform;
+            transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
+            -moz-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -moz-transition-timing-function: linear;
+            -o-transition-timing-function: linear;
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
         }
 
 
         .a1 {
             width: 100%;
             height: 500px;
-            background-image: url("http://www.lotong.gov.tw/uploadfile/20170525161124543.jpg");
+            background-image: url("http://events.2017.taipei/images/title-one-banner12.jpg");
             background-size: cover;
         }
 
         .a2 {
             width: 100%;
             height: 500px;
-            background-image: url("http://ntpctourcdn.azureedge.net/Content/Upload/Calendar/69b1cb93-09ef-4dcc-b6bd-8c99991b093e.jpg");
+            background-image: url("https://www.eventpal.com.tw/promo/fe1eb89d-e3fd-4d9e-975a-40189c8df4e8/36cd3b22-f071-4391-8b26-1048b14e4c91.jpg");
             background-size: cover;
         }
 
         .a3 {
             width: 100%;
             height: 500px;
-            background-image: url("http://mmmfile.emmm.tw/mmnews/hsinchu/image/201703241139120.jpg");
+            background-image: url("https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/20882644_1890247731238488_2832126746659689704_n.png?oh=e2cd187a9aad133612ad3f19bf4d153f&oe=5A303906");
             background-size: cover;
         }
     </style>
@@ -294,6 +422,27 @@
         </div>
     </div>
 
+    <div class="overlay-navigation">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#" data-content="About SU-YO">關於 SU-YO</a></li>
+                <li><a href="Attraction.html" data-content="Attractions">景點類別</a></li>
+                <li><a href="new2.html" data-content="New Activity">New 活動</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="menu-trigger"></div>
+
+    <div class="open-overlay">
+        <span class="bar-top"></span>
+        <span class="bar-middle"></span>
+        <span class="bar-bottom"></span>
+    </div>
+
+
+
     <div class="container">
         <div class="cards">
             <a class="card" href="http://skylantern.ntpc.gov.tw/">
@@ -341,7 +490,7 @@
             <a class="card" href="http://www.erv-nsa.gov.tw/user/Article.aspx?Lang=1&SNo=03013608">
 			<span class="card-header" style="background-image: url(http://www.erv-nsa.gov.tw/userfiles/image/2017%E7%BE%85%E5%B1%B1%E9%AB%94%E9%A9%97%E6%B4%BB%E5%8B%95-1.jpg);">
 				<span class="card-title">
-					<h3>2017花東縱谷「體驗活動－往羅高手」來囉！！</h3>
+					<h3>2017花東縱谷「體驗活動」</h3>
 				</span>
 			</span>
 			<span class="card-summary">
@@ -355,7 +504,7 @@
             <a class="card" href="http://events.2017.taipei/activity/activity_20170731.html#A01">
 			<span class="card-header" style="background-image: url(http://events.2017.taipei/images/title-one-banner12.jpg);">
 				<span class="card-title">
-					<h3>世大運公園好好玩</h3>
+					<h3>2017世大運公園好好玩</h3>
 				</span>
 			</span>
 			<span class="card-summary">
@@ -364,21 +513,116 @@
 			<span class="card-meta">
 				Go to the site
 			</span>
+        </a>
+
+            <a class="card" href="https://www.eventpal.com.tw/FOAS/actions/ActivityIndex.action?showTabContent&seqno=94ffc596-ab40-4300-b72d-842e9eded1f4">
+			<span class="card-header" style="background-image: url(https://www.eventpal.com.tw/promo/fe1eb89d-e3fd-4d9e-975a-40189c8df4e8/36cd3b22-f071-4391-8b26-1048b14e4c91.jpg);">
+				<span class="card-title">
+					<h3>2017花蓮海洋馬拉松</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				黎明教養院今年適逢四十週年，主辦方因而將路跑定調為「肯納秋履，適時有你」，為感謝各界四十年來對黎明的關懷，黎明教養院...
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+        </a>
+
+
+            <a class="card" href="http://bao-ming.com/eb/www/activity_content.php?activitysn=2354">
+			<span class="card-header1" style="background-image: url(http://bao-ming.com/eb/Upload/activity/2354-e3bbe5e908051395d0f8d9505254fedb/images/20170804163942-07d19632dc7be9abd0146fdc804943a4.jpg);">
+				<span class="card-title">
+					<h3>2017冬暖澎湖泳出健康</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				延續去年『冬暖澎湖、泳出健康』活動，持續帶動澎湖觀光淡季；同時結合休閒、觀光，行銷本縣最美麗的海灣，以帶動冬季地方休閒觀光發展。
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+        </a>
+
+
+            <a class="card" href="https://www.eventpal.com.tw/FOAS/actions/ActivityIndex.action?showTabContent&seqno=fe75410c-2f11-4544-8a2f-283b153cc53e">
+			<span class="card-header" style="background-image: url(https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/20841820_1891275607802367_1193868607723516378_n.jpg?oh=87f670caa6c9a4e86e9f25666ea04f24&oe=5A261876);">
+				<span class="card-title">
+					<h3>2017卡娜赫拉的小動物趣味路跑</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				卡娜赫拉的小動物趣味路跑，全世界第一場就在台北！快來跟最古錐、最療癒的 P助 跟 粉紅兔兔 一同玩樂！
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
+        </a>
+
+
+            <a class="card" href="https://www.eventpal.com.tw/FOAS/actions/ActivityIndex.action?showTabContent&seqno=f6a19117-9595-4526-bcdd-7a0817463fb3">
+			<span class="card-header1" style="background-image: url(https://www.eventpal.com.tw/d3058e85-20ae-4711-8f13-5820af28b325/2017_kv_230.png);">
+				<span class="card-title">
+					<h3>2017佛蒙特咖哩路跑</h3>
+				</span>
+			</span>
+			<span class="card-summary">
+				愛吃咖哩的你絕對不能錯過！全台首選，咖哩路跑又要在宜蘭登場啦！！時下最夯咖哩馬拉松，
+要你邊跑邊體驗，深入田園摘採咖哩食材！...
+			</span>
+			<span class="card-meta">
+				Go to the site
+			</span>
 		</a>
+        </div>
+    </div>
 
 
 
 
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('.open-overlay').click(function() {
+            var overlay_navigation = $('.overlay-navigation'),
+                nav_item_1 = $('nav li:nth-of-type(1)'),
+                nav_item_2 = $('nav li:nth-of-type(2)'),
+                nav_item_3 = $('nav li:nth-of-type(3)'),
+                nav_item_4 = $('nav li:nth-of-type(4)'),
+                nav_item_5 = $('nav li:nth-of-type(5)'),
+                top_bar = $('.bar-top'),
+                middle_bar = $('.bar-middle'),
+                bottom_bar = $('.bar-bottom');
 
+            overlay_navigation.toggleClass('overlay-active');
+            if (overlay_navigation.hasClass('overlay-active')) {
 
-
-
+                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+                nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+            } else {
+                top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+                middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+                bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+                nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+            }
+        })
+    </script>    
 
 </body>
 
