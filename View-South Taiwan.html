@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/attr.css" rel="stylesheet">
+    <link href="css/card.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #FFFFBB;
+        }
+    </style>
+
+    <style>
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #bbb;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="overlay-navigation">
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html" data-content="The beginning">Home</a></li>
+                <li><a href="#" data-content="About SU-YO">關於 SU-YO</a></li>
+                <li><a href="Attraction.html" data-content="Attraction">景點類別</a></li>
+                <li><a href="#" data-content="New Activity">NEW 活動</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="home">
+
+        <div class="open-overlay">
+            <span class="bar-top"></span>
+            <span class="bar-middle"></span>
+            <span class="bar-bottom"></span>
+        </div>
+    </section>
+
+    <div class="position">
+
+        <!--start button, nothing above this is necessary -->
+        <div class="svg-wrapper">
+            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href="View-North Taiwan.html"><span class="spot"></span>North</a>
+        </div>
+      </svg>
+        </div>
+        <!--Next button -->
+        <div class="svg-wrapper">
+            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href="View-Central Taiwan.html"><span class="spot"></span>Central</a>
+        </div>
+      </svg>
+        </div>
+        <!--Next button -->
+        <div class="svg-wrapper">
+            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href="View-East Taiwan.html"><span class="spot"></span>East</a>
+        </div>
+      </svg>
+        </div>
+        <!--End button -->
+
+    </div>
+
+
+    <div>
+
+        <div id="carousel">
+            <figure id="spinner">
+                <img src="img/View-South Taiwan/View大東夜市.jpg" alt>
+                <img src="img/View-South Taiwan/View六合夜市.jpg" alt>
+                <img src="img/View-South Taiwan/View延平老街.jpg" alt>
+                <img src="img/View-South Taiwan/View新化老街.jpg" alt>
+                <img src="img/View-South Taiwan/View旗山老街.jpg" alt>
+                <img src="img/View-South Taiwan/View奮起湖老街.jpg" alt>
+            </figure>
+        </div>
+
+        <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+        <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+
+        <div>
+            <ul class="card-list">
+                <li class="card">
+                    <a class="card-image" href="http://shine.gogoblog.tw/mobile/blogview.php?blogid=1275" target="_blank" style="background-image: url(img/View嘉義文化路夜市.jpg);" data-image-full="img/View嘉義文化路夜市.jpg">
+                        <img src="img/View嘉義文化路夜市.jpg" alt="文化路夜市" />
+                    </a>
+                    <a class="card-description" href="http://shine.gogoblog.tw/mobile/blogview.php?blogid=1275" target="_blank">
+                        <h2>文化路夜市</h2>
+                        <p>嘉義市東區文化路</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://tinachiang0824.pixnet.net/blog/post/459053284-" target="_blank" style="background-image: url(img/View-South台南花園夜市.jpg);" data-image-full="img/View-South台南花園夜市.jpg">
+                        <img src="img/View-South台南花園夜市.jpg" alt="花園夜市" />
+                    </a>
+                    <a class="card-description" href="http://tinachiang0824.pixnet.net/blog/post/459053284-" target="_blank">
+                        <h2>花園夜市</h2>
+                        <p>台南市北區海安路三段533號</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://foodintainan.com.tw/blog/post/397871518-" target="_blank" style="background-image: url(img/View-South大東夜市.jpg);" data-image-full="img/View-South大東夜市.jpg">
+                        <img src="img/View-South大東夜市.jpg" alt="大東夜市" />
+                    </a>
+                    <a class="card-description" href="http://foodintainan.com.tw/blog/post/397871518-" target="_blank">
+                        <h2>大東夜市</h2>
+                        <p>台南市東區林森路一段276號</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://www.leeleelin.com/2013/07/blog-post_5057.html" target="_blank" style="background-image: url(img/View-South太平老街.jpg);" data-image-full="img/View-South太平老街.jpg">
+                        <img src="img/View-South太平老街.jpg" alt="高雄" />
+                    </a>
+                    <a class="card-description" href="http://www.leeleelin.com/2013/07/blog-post_5057.html" target="_blank">
+                        <h2>太平老街</h2>
+                        <p>雲林縣斗六市太平路123號</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://www.leeleelin.com/2013/06/blog-post_8225.html" target="_blank" style="background-image: url(img/View-South奮起湖老街.jpg)" data-image-full="img/View-South奮起湖老街.jpg">
+                        <img src="img/View-South奮起湖老街.jpg" alt="奮起湖老街" />
+                    </a>
+                    <a class="card-description" href="http://www.leeleelin.com/2013/06/blog-post_8225.html" target="_blank">
+                        <h2>奮起湖老街</h2>
+                        <p>嘉義縣竹崎鄉中和村奮起湖</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://www.leeleelin.com/2009/07/blog-post_821.html" target="_blank" style="background-image:url(img/View-South新化老街.jpg)" data-image-full="img/View-South新化老街.jpg">
+                        <img src="img/View-South新化老街.jpg" alt="新化老街" />
+                    </a>
+                    <a class="card-description" href="http://www.leeleelin.com/2009/07/blog-post_821.html" target="_blank">
+                        <h2>新化老街</h2>
+                        <p>台南市新化區中正路</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://www.leeleelin.com/2010/07/blog-post_2587.html" target="_blank" style="background-image: url(img/View-South延平老街.jpg);" data-image-full="img/View-South延平老街.jpg">
+                        <img src="img/View-South延平老街.jpg" alt="延平老街" />
+                    </a>
+                    <a class="card-description" href="http://www.leeleelin.com/2010/07/blog-post_2587.html" target="_blank">
+                        <h2>延平老街</h2>
+                        <p>雲林縣西螺鎮延平路92號</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://www.leeleelin.com/2013/08/blog-post_5.html" target="_blank" style="background-image: url(img/View-South旗山老街.jpg);" data-image-full="img/View-South旗山老街.jpg">
+                        <img src="img/View-South旗山老街.jpg" alt="高雄" />
+                    </a>
+                    <a class="card-description" href="http://www.leeleelin.com/2013/08/blog-post_5.html" target="_blank">
+                        <h2>旗山老街</h2>
+                        <p>高雄市旗山區中山路</p>
+                    </a>
+                </li>
+
+                <li class="card">
+                    <a class="card-image" href="http://www.storm.mg/lifestyle/209088" target="_blank" style="background-image: url(img/View-South六合夜市.jpg);" data-image-full="img/View-South六合夜市.jpg">
+                        <img src="img/View-South六合夜市.jpg" alt="高雄" />
+                    </a>
+                    <a class="card-description" href="http://www.storm.mg/lifestyle/209088" target="_blank">
+                        <h2>六合夜市</h2>
+                        <p>高雄市新興區六合二路與中山一路口</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var angle = 0;
+
+        function galleryspin(sign) {
+            spinner = document.querySelector("#spinner");
+            if (!sign) {
+                angle = angle + 60;
+            } else {
+                angle = angle - 60;
+            }
+            spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); -moz-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg);");
+        }
+
+
+        $('.open-overlay').click(function() {
+            var overlay_navigation = $('.overlay-navigation'),
+                nav_item_1 = $('nav li:nth-of-type(1)'),
+                nav_item_2 = $('nav li:nth-of-type(2)'),
+                nav_item_3 = $('nav li:nth-of-type(3)'),
+                nav_item_4 = $('nav li:nth-of-type(4)'),
+                nav_item_5 = $('nav li:nth-of-type(5)'),
+                top_bar = $('.bar-top'),
+                middle_bar = $('.bar-middle'),
+                bottom_bar = $('.bar-bottom');
+
+            overlay_navigation.toggleClass('overlay-active');
+            if (overlay_navigation.hasClass('overlay-active')) {
+
+                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+                nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+            } else {
+                top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+                middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+                bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+                nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+            }
+        })
+    </script>
+    <script>
+        // This is "probably" IE9 compatible but will need some fallbacks for IE8
+        // - (event listeners, forEach loop)
+
+        // wait for the entire page to finish loading
+        window.addEventListener('load', function() {
+
+            // setTimeout to simulate the delay from a real page load
+            setTimeout(lazyLoad, 1000);
+
+        });
+
+        function lazyLoad() {
+            var card_images = document.querySelectorAll('.card-image');
+
+            // loop over each card image
+            card_images.forEach(function(card_image) {
+                var image_url = card_image.getAttribute('data-image-full');
+                var content_image = card_image.querySelector('img');
+
+                // change the src of the content image to load the new high res photo
+                content_image.src = image_url;
+
+                // listen for load event when the new photo is finished loading
+                content_image.addEventListener('load', function() {
+                    // swap out the visible background image with the new fully downloaded photo
+                    card_image.style.backgroundImage = 'url(' + image_url + ')';
+                    // add a class to remove the blur filter to smoothly transition the image change
+                    card_image.className = card_image.className + ' is-loaded';
+                });
+
+            });
+
+        }
+    </script>
+</body>
+
+</html>
