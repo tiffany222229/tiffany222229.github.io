@@ -25,15 +25,17 @@
     <style>
         body {
             font-family: 'Oswald', sans-serif;
-            background-color: #FFFFBB;
         }
     </style>
 
     <style>
-        .footer {
+        .home {
             width: 100%;
-            height: 100px;
-            background-color: #bbb;
+            height: 100vh;
+            position: relative;
+            background-image: url("img/Paradise-indx.jpg");
+            background-size: cover;
+            background-position: center center;
         }
     </style>
 
@@ -47,7 +49,7 @@
                 <li><a href="index.html" data-content="The beginning">Home</a></li>
                 <li><a href="#" data-content="About SU-YO">關於 SU-YO</a></li>
                 <li><a href="" data-content="Attraction">景點類別</a></li>
-                <li><a href="#" data-content="New Activity">NEW 活動</a></li>
+                <li><a href="new2.html" data-content="New Activity">NEW 活動</a></li>
             </ul>
         </nav>
     </div>
@@ -211,122 +213,125 @@
     </div>
 
     <div class="buttons">
-        <button class="blob-btn">
-              Blob Button
-              <span class="blob-btn__inner">
-                <span class="blob-btn__blobs">
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                </span>
-              </span>
-            </button>
+        <a href="index.html" data-content="">
+            <button class="blob-btn">
+                        INDEX SU-YO
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </button>
+        </a>
         <br/>
-        <button class="blob-btn">
-              This one is slightly bigger
-              <span class="blob-btn__inner">
-                <span class="blob-btn__blobs">
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                </span>
-              </span>
-            </button>
-    </div>
+        <a href="" data-content="">
+            <button class="blob-btn">
+                        Attractions                        
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </button>
+        </a>
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        var angle = 0;
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            var angle = 0;
 
-        function galleryspin(sign) {
-            spinner = document.querySelector("#spinner");
-            if (!sign) {
-                angle = angle + 60;
-            } else {
-                angle = angle - 60;
+            function galleryspin(sign) {
+                spinner = document.querySelector("#spinner");
+                if (!sign) {
+                    angle = angle + 60;
+                } else {
+                    angle = angle - 60;
+                }
+                spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); -moz-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg);");
             }
-            spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); -moz-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg);");
-        }
 
 
-        $('.open-overlay').click(function() {
-            var overlay_navigation = $('.overlay-navigation'),
-                nav_item_1 = $('nav li:nth-of-type(1)'),
-                nav_item_2 = $('nav li:nth-of-type(2)'),
-                nav_item_3 = $('nav li:nth-of-type(3)'),
-                nav_item_4 = $('nav li:nth-of-type(4)'),
-                nav_item_5 = $('nav li:nth-of-type(5)'),
-                top_bar = $('.bar-top'),
-                middle_bar = $('.bar-middle'),
-                bottom_bar = $('.bar-bottom');
+            $('.open-overlay').click(function() {
+                var overlay_navigation = $('.overlay-navigation'),
+                    nav_item_1 = $('nav li:nth-of-type(1)'),
+                    nav_item_2 = $('nav li:nth-of-type(2)'),
+                    nav_item_3 = $('nav li:nth-of-type(3)'),
+                    nav_item_4 = $('nav li:nth-of-type(4)'),
+                    nav_item_5 = $('nav li:nth-of-type(5)'),
+                    top_bar = $('.bar-top'),
+                    middle_bar = $('.bar-middle'),
+                    bottom_bar = $('.bar-bottom');
 
-            overlay_navigation.toggleClass('overlay-active');
-            if (overlay_navigation.hasClass('overlay-active')) {
+                overlay_navigation.toggleClass('overlay-active');
+                if (overlay_navigation.hasClass('overlay-active')) {
 
-                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
-                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
-                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
-                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
-                nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
-                nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
-                nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
-                nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
-                nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
-            } else {
-                top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
-                middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
-                bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
-                overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
-                nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
-                nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
-                nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
-                nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
-                nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
-            }
-        })
-    </script>
-    <script>
-        // This is "probably" IE9 compatible but will need some fallbacks for IE8
-        // - (event listeners, forEach loop)
+                    top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                    middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                    bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                    overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+                    nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+                    nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+                    nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+                    nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+                    nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+                } else {
+                    top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+                    middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+                    bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+                    overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+                    nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+                    nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+                    nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+                    nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+                    nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+                }
+            })
+        </script>
+        <script>
+            // This is "probably" IE9 compatible but will need some fallbacks for IE8
+            // - (event listeners, forEach loop)
 
-        // wait for the entire page to finish loading
-        window.addEventListener('load', function() {
+            // wait for the entire page to finish loading
+            window.addEventListener('load', function() {
 
-            // setTimeout to simulate the delay from a real page load
-            setTimeout(lazyLoad, 1000);
-
-        });
-
-        function lazyLoad() {
-            var card_images = document.querySelectorAll('.card-image');
-
-            // loop over each card image
-            card_images.forEach(function(card_image) {
-                var image_url = card_image.getAttribute('data-image-full');
-                var content_image = card_image.querySelector('img');
-
-                // change the src of the content image to load the new high res photo
-                content_image.src = image_url;
-
-                // listen for load event when the new photo is finished loading
-                content_image.addEventListener('load', function() {
-                    // swap out the visible background image with the new fully downloaded photo
-                    card_image.style.backgroundImage = 'url(' + image_url + ')';
-                    // add a class to remove the blur filter to smoothly transition the image change
-                    card_image.className = card_image.className + ' is-loaded';
-                });
+                // setTimeout to simulate the delay from a real page load
+                setTimeout(lazyLoad, 1000);
 
             });
 
-        }
-    </script>
+            function lazyLoad() {
+                var card_images = document.querySelectorAll('.card-image');
+
+                // loop over each card image
+                card_images.forEach(function(card_image) {
+                    var image_url = card_image.getAttribute('data-image-full');
+                    var content_image = card_image.querySelector('img');
+
+                    // change the src of the content image to load the new high res photo
+                    content_image.src = image_url;
+
+                    // listen for load event when the new photo is finished loading
+                    content_image.addEventListener('load', function() {
+                        // swap out the visible background image with the new fully downloaded photo
+                        card_image.style.backgroundImage = 'url(' + image_url + ')';
+                        // add a class to remove the blur filter to smoothly transition the image change
+                        card_image.className = card_image.className + ' is-loaded';
+                    });
+
+                });
+
+            }
+        </script>
 </body>
 
 </html>

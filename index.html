@@ -21,6 +21,10 @@
     <link href="css/nav.css" rel="stylesheet">
     <link href="css/forrt.css" rel="stylesheet">
     <style>
+        .buttons {
+            margin-top: 45px;
+        }
+        
         .Navigation,
         {
             border: 1px solid;
@@ -184,7 +188,7 @@
         <nav role="navigation">
             <ul>
                 <li><a href="#" data-content="About SU-YO">關於 SU-YO</a></li>
-                <li><a href="Attraction.html" data-content="Attractions">景點類別</a></li>
+                <li><a href="#" data-content="Attractions">景點類別</a></li>
                 <li><a href="new2.html" data-content="New Activity">New 活動</a></li>
 
             </ul>
@@ -210,73 +214,76 @@
     </div>
 
     <div class="buttons">
-        <button class="blob-btn">
-                  Blob Button
-                  <span class="blob-btn__inner">
-                    <span class="blob-btn__blobs">
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                    </span>
-                  </span>
-                </button>
+        <a href="index.html" data-content="">
+            <button class="blob-btn">
+                        About SU-YO
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </button>
+        </a>
         <br/>
-        <button class="blob-btn">
-                  This one is slightly bigger
-                  <span class="blob-btn__inner">
-                    <span class="blob-btn__blobs">
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                    </span>
-                  </span>
-                </button>
-    </div>
+        <a href="" data-content="">
+            <button class="blob-btn">
+                        Attractions                        
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </button>
+        </a>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
 
-    <script>
-        $('.open-overlay').click(function() {
-            var overlay_navigation = $('.overlay-navigation'),
-                nav_item_1 = $('nav li:nth-of-type(1)'),
-                nav_item_2 = $('nav li:nth-of-type(2)'),
-                nav_item_3 = $('nav li:nth-of-type(3)'),
-                nav_item_4 = $('nav li:nth-of-type(4)'),
-                nav_item_5 = $('nav li:nth-of-type(5)'),
-                top_bar = $('.bar-top'),
-                middle_bar = $('.bar-middle'),
-                bottom_bar = $('.bar-bottom');
+        <script>
+            $('.open-overlay').click(function() {
+                var overlay_navigation = $('.overlay-navigation'),
+                    nav_item_1 = $('nav li:nth-of-type(1)'),
+                    nav_item_2 = $('nav li:nth-of-type(2)'),
+                    nav_item_3 = $('nav li:nth-of-type(3)'),
+                    nav_item_4 = $('nav li:nth-of-type(4)'),
+                    nav_item_5 = $('nav li:nth-of-type(5)'),
+                    top_bar = $('.bar-top'),
+                    middle_bar = $('.bar-middle'),
+                    bottom_bar = $('.bar-bottom');
 
-            overlay_navigation.toggleClass('overlay-active');
-            if (overlay_navigation.hasClass('overlay-active')) {
+                overlay_navigation.toggleClass('overlay-active');
+                if (overlay_navigation.hasClass('overlay-active')) {
 
-                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
-                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
-                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
-                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
-                nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
-                nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
-                nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
-                nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
-                nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
-            } else {
-                top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
-                middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
-                bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
-                overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
-                nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
-                nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
-                nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
-                nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
-                nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
-            }
-        })
-    </script>
+                    top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                    middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                    bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                    overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+                    nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+                    nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+                    nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+                    nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+                    nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+                } else {
+                    top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+                    middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+                    bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+                    overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+                    nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+                    nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+                    nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+                    nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+                    nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+                }
+            })
+        </script>
 </body>
 
 </html>

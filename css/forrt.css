@@ -12,7 +12,7 @@ body {
 }
 
 .buttons {
-    margin-top: 50px;
+    margin-top: 160px;
     text-align: center;
 }
 
@@ -24,7 +24,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #0fe0f5;
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
     background-color: transparent;
     outline: none;
