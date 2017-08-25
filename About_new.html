@@ -10,6 +10,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,52 +23,106 @@
             margin: 0;
             min-height: 100vh;
             width: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
             background-image: url('22.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 100%;
         }
-        .a{
+        
+        .a {
             height: 300px;
             width: 100%;
             background-color: red;
         }
-
+        
         .vertical-container {
             height: 100vh;
             display: -webkit-flex;
-            display:         flex;
+            display: flex;
             -webkit-align-items: center;
-                    align-items: center;
+            align-items: center;
             -webkit-justify-content: center;
-                    justify-content: center;
-            position:relative; 
-            top:-100px;
-            left:-40px;  
+            justify-content: center;
+            position: relative;
+            top: -100px;
+            left: -40px;
         }
-        .text-card-feet{
-            font-family:Microsoft JhengHei;
-            font-weight:bold ;
-            position:relative; 
-            top:-15px;
+        
+        .text-card-feet {
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
+            position: relative;
+            top: -15px;
         }
-        .text-card-font{
-            font-family:Microsoft JhengHei;
-            font-weight:bold;
+        
+        .text-card-font {
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
             line-height: 45px;
             letter-spacing: 3px;
             font-size: 15px;
-            
-        }        
+        }
+        
+        .open-overlay {
+            position: fixed;
+            /*使漢堡條三線條位置固定在一個區域*/
+            right: 5rem;
+            top: 3.2rem;
+            z-index: 100;
+            width: 34px;
+            display: block;
+            cursor: pointer;
+        }
+        
+        .menu-trigger {
+            background-image: linear-gradient(45deg, #99fcff 0%, #0fd2c5 36%, #fff56b 100%);
+            background-size: 100% 300%;
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border: none;
+            position: fixed;
+            right: 45px;
+            top: 26px;
+            z-index: 5;
+            cursor: pointer;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
 <body>
 
+
+    <div class="overlay-navigation">
+        <nav role="navigation">
+            <ul>
+                <li><a href="About_new.html" data-content="About SU-YO">關於 SU-YO</a></li>
+                <li><a href="new2.html" data-content="New Activity">New 活動</a></li>
+                <li><a href="index.html" data-content="Home">首頁</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="menu-trigger"></div>
+
+    <div class="open-overlay">
+        <span class="bar-top"></span>
+        <span class="bar-middle"></span>
+        <span class="bar-bottom"></span>
+    </div>
+
     <div class="container vertical-container ">
         <div class="row">
             <div class="col-md-5 col-xs-12">
-                <img class="center-block" width="300" height="300" src="logo.jpg" alt="">
+                <a href="index.html">
+                    <img class="center-block" width="300" height="300" src="logo.jpg" alt="">
+                </a>
             </div>
             <div class="col-md-7 col-xs-12">
                 <div class="text-card">
@@ -79,10 +134,49 @@
     </div>
 
 
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $('.open-overlay').click(function() {
+            var overlay_navigation = $('.overlay-navigation'),
+                nav_item_1 = $('nav li:nth-of-type(1)'),
+                nav_item_2 = $('nav li:nth-of-type(2)'),
+                nav_item_3 = $('nav li:nth-of-type(3)'),
+                nav_item_4 = $('nav li:nth-of-type(4)'),
+                nav_item_5 = $('nav li:nth-of-type(5)'),
+                top_bar = $('.bar-top'),
+                middle_bar = $('.bar-middle'),
+                bottom_bar = $('.bar-bottom');
+
+            overlay_navigation.toggleClass('overlay-active');
+            if (overlay_navigation.hasClass('overlay-active')) {
+
+                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+                nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+            } else {
+                top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+                middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+                bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+                nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+            }
+        })
+    </script>
 </body>
 
 </html>

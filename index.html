@@ -21,6 +21,17 @@
     <link href="css/nav.css" rel="stylesheet">
     <link href="css/forrt.css" rel="stylesheet">
     <style>
+        .open-overlay {
+            position: fixed;
+            /*使漢堡條三線條位置固定在一個區域*/
+            right: 5rem;
+            top: 3.2rem;
+            z-index: 100;
+            width: 34px;
+            display: block;
+            cursor: pointer;
+        }
+        
         .buttons {
             margin-top: 45px;
         }
@@ -71,7 +82,7 @@
         }
         
         .Layout {
-            background: url("http://i.imgur.com/WuQC9Hx.png") repeat 0px 0px;
+            background: url("img/idex-1.jpg") repeat 0px 0px;
             z-index: 0;
             background-size: cover;
             height: 100vh;
@@ -187,8 +198,8 @@
     <div class="overlay-navigation">
         <nav role="navigation">
             <ul>
-                <li><a href="#" data-content="About SU-YO">關於 SU-YO</a></li>
-                <li><a href="#" data-content="Attractions">景點類別</a></li>
+                <li><a href="About_new.html" data-content="About SU-YO">關於 SU-YO</a></li>
+                <li><a href="attractions.html" data-content="Attractions">景點類別</a></li>
                 <li><a href="new2.html" data-content="New Activity">New 活動</a></li>
 
             </ul>
@@ -204,17 +215,19 @@
     </div>
 
     <div class="Layout">
-        <div class="logo">
-            <div class="go">
+        <a href="About_new.html">
+            <div class="logo">
+                <div class="go">
 
-            </div>
+                </div>
+        </a>
         </div>
 
 
     </div>
 
     <div class="buttons">
-        <a href="index.html" data-content="">
+        <a href="About_new.html" data-content="">
             <button class="blob-btn">
                         About SU-YO
                       <span class="blob-btn__inner">
@@ -228,7 +241,7 @@
                     </button>
         </a>
         <br/>
-        <a href="" data-content="">
+        <a href="attractions.html" data-content="">
             <button class="blob-btn">
                         Attractions                        
                       <span class="blob-btn__inner">
