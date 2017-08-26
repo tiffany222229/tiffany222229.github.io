@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Factory-Central Taiwan</title>
+    <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +14,6 @@
     <link href="css/card.css" rel="stylesheet">
     <link href="css/cover.css" rel="stylesheet">
     <link href="css/forrt.css" rel="stylesheet">
-    <link href="css/abcd.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,24 +25,17 @@
     <style>
         body {
             font-family: 'Oswald', sans-serif;
-            background: url("img/vintage-concrete.png");
-        }
-        
-        .home {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            background-image: url("img/Factory-indx.jpg");
-            background-size: cover;
-            background-position: center center;
         }
     </style>
 
     <style>
-        .footer {
+        .home {
             width: 100%;
-            height: 100px;
-            background-color: #bbb;
+            height: 100vh;
+            position: relative;
+            background-image: url("img/Paradise-indx.jpg");
+            background-size: cover;
+            background-position: center center;
         }
     </style>
 
@@ -109,20 +101,19 @@
 
     <div>
 
-        <section class="row">
-            <div class="nine columns">
-                <div class="coverflow top10 bot10">
-                    <a class="prev-arrow"></a>
-                    <a href=""><img src="img/Factory-Central Taiwan/中興穀堡稻米-1.jpg" class="coverflow__image" /></a>
-                    <a href=""><img src="img/Factory-Central Taiwan/台灣氣球-1.jpg" class="coverflow__image" /></a>
-                    <a href=""><img src="img/Factory-Central Taiwan/白蘭氏-1.jpg" class="coverflow__image" /></a>
-                    <a href=""><img src="img/Factory-Central Taiwan/老樹根-1.jpg" class="coverflow__image" /></a>
-                    <a href=""><img src="img/Factory-Central Taiwan/緞帶王-1.jpg" class="coverflow__image" /></a>
-                    <a class="next-arrow"></a>
-                </div>
-            </div>
-        </section>
+        <div id="carousel">
+            <figure id="spinner">
+                <img src="img/Factory-Central Taiwan/中興穀堡稻米-1.jpg" alt>
+                <img src="img/Factory-Central Taiwan/台灣氣球-1.jpg" alt>
+                <img src="img/Factory-Central Taiwan/白蘭氏-1.jpg" alt>
+                <img src="img/Factory-Central Taiwan/老樹根-1.jpg" alt>
+                <img src="img/Factory-Central Taiwan/張連昌薩克斯-1.jpg" alt>
+                <img src="img/Factory-Central Taiwan/緞帶王-1.jpg" alt>
+            </figure>
+        </div>
 
+        <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+        <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
 
         <div>
             <ul class="card-list">
@@ -249,12 +240,11 @@
             </a>
         </div>
 
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/abcd.min.js"></script>
-
         <script>
             var angle = 0;
 
