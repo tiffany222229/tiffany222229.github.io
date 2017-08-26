@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>attractions</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/forrt.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    body {
+            background-color: white;
+        }
+        
+        .main {
+            background-image: url(img/kenting5-2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 40vh;
+        }
+        
+        .section1 {
+            /* height: 500px;  */
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        
+        .attr_card {
+            height: 300px;
+            width: 50%;
+            background-color: #00dbfa;
+        }
+        
+        .attr_card_text_block {
+            background-color: #888;
+            width: 100%;
+        }
+        
+        .attr_card_text_block1 {
+            padding: 40px 20px;
+        }
+        
+        .attr_card_text_block2 {
+            padding: 40px 40px;
+        }
+        
+        .attr_card_text_block3 {
+            padding: 0px 20px;
+            width: 80%;
+        }
+        
+        .attr_card_title {
+            color: black;
+            margin-top: -70px;
+            margin-bottom: 30px;
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 48px;
+        }
+        
+        .attr_card_text {
+            color: #fff;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 2px;
+        }
+        
+        .attr_card_title_1 {
+            margin-top: -52px;
+            margin-left: 7px;
+            color: black;
+            margin-top: -70px;
+            margin-bottom: 30px;
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 48px;
+        }
+        /*
+        .attr_card_img {
+            background-position: center;
+            background-size: cover;
+            height: 366px;
+            width: calc(100% + 40px);
+        }
+        
+        .attr_card_img_1 {
+            background-image: url('2.jpg');
+            margin-left: -30px;
+            margin-top: -40px;
+        }
+        
+        .attr_card_img_2 {
+            background-image: url('lala.jpg');
+            margin-right: 30px;
+            margin-top: -40px;
+        }
+        
+        .attr_card_img_3 {
+            background-image: url('so-1.jpg');
+            margin-top: 23px;
+            width: calc(100% + 20px);
+            margin-left: 25px;
+            position: absolute;
+        }
+        
+        .attr_card_img_4 {
+            background-image: url('da-1.jpg');
+            margin-top: 23px;
+            width: calc(100% + 20px);
+            margin-left: 30px;
+            position: absolute;
+        }
+        /*
+        
+        .section2 {
+            /* height: 500px;  */
+        
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .section3 {
+        /* height: 500px;  */
+        
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .section3_attr_card {
+        position: relative;
+        height: 300px;
+        width: 80%;
+        background-color: #0dcebf;
+    }
+    .section3_title {
+        position: absolute;
+        top: -57px;
+        left: -30px;
+        font-size: 48px;
+        font-weight: bold;
+    }
+    .crossed {
+        background: linear-gradient(to top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 49.9%, rgba(255, 75, 0, 1) 50%, rgba(0, 0, 0, 0) 50.1%, rgba(0, 0, 0, 0) 100%);
+        ;
+    }
+    .crossed2 {
+        background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 49.9%, rgba(255, 75, 0, 1) 50%, rgba(0, 0, 0, 0) 50.1%, rgba(0, 0, 0, 0) 100%);
+        ;
+    }
+    @media screen and (max-width: 1200px) {
+        .attr_card_img {
+            height: 400px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .attr_card_img_2 {
+            height: 429px;
+        }
+    }
+    /* mobile media query */
+    @media screen and (max-width: 992px) {
+        .attr_card_img {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+    .open-overlay {
+        position: fixed;
+        /*使漢堡條三線條位置固定在一個區域*/
+        
+        right: 5rem;
+        top: 3.2rem;
+        z-index: 100;
+        width: 34px;
+        display: block;
+        cursor: pointer;
+    }
+    .menu-trigger {
+        background-image: linear-gradient(45deg, #99fcff 0%, #0fd2c5 36%, #fff56b 100%);
+        background-size: 100% 300%;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        border: none;
+        position: fixed;
+        right: 45px;
+        top: 26px;
+        z-index: 5;
+        cursor: pointer;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+    .buttons {
+        margin-top: 100px;
+    }
+    </style>
+    <style>
+        /*PEN STYLES*/
+        
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700);
+        body {
+            background: #f1f1f1;
+        }
+        
+        .blog-card {
+            transition: height 0.3s ease;
+            -webkit-transition: height 0.3s ease;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+            margin: 1.5cm auto;
+            ;
+            overflow: hidden;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.45em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .blog-card:hover .details {
+            left: 0;
+        }
+        
+        .blog-card:hover.alt .details {
+            right: 0;
+        }
+        
+        .blog-card.alt .details {
+            right: -100%;
+            left: inherit;
+        }
+        
+        .blog-card .photo {
+            height: 200px;
+            position: relative;
+        }
+        
+        .blog-card .photo.photo1 {
+            background: url("img/RESTAURANT-index.jpg") center no-repeat;
+            background-size: cover;
+        }
+        
+        .blog-card .photo.photo2 {
+            background: url("img/PARADISE nide.jpg") center no-repeat;
+            background-size: cover;
+        }
+        
+        .blog-card .photo.photo3 {
+            background: url("img/Factory-inde222.jpg") center no-repeat;
+            background-size: cover;
+        }
+        
+        .blog-card .photo.photo4 {
+            background: url("img/View-inde.jpg") center no-repeat;
+            background-size: cover;
+        }
+        
+        .blog-card .details {
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
+            color: #fff;
+            font-family: "Open Sans";
+            list-style: none;
+            margin: 0;
+            padding: 10px 15px;
+            height: 200px;
+            /*POSITION*/
+            position: absolute;
+            top: 0;
+            left: -100%;
+        }
+        
+        .blog-card .details>li {
+            padding: 3px 0;
+        }
+        
+        .blog-card .details li:before,
+        .blog-card .details .tags ul:before {
+            font-family: FontAwesome;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .blog-card .details .author:before {
+            content: "\f007";
+        }
+        
+        .blog-card .details .date:before {
+            content: "\f133";
+        }
+        
+        .blog-card .details .tags ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .blog-card .details .tags ul:before {
+            content: "\f02b";
+        }
+        
+        .blog-card .details .tags li {
+            display: inline-block;
+            margin-right: 3px;
+        }
+        
+        .blog-card .details a {
+            color: inherit;
+            border-bottom: 1px dotted;
+        }
+        
+        .blog-card .details a:hover {
+            color: #75D13B;
+        }
+        
+        .blog-card .description {
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        .blog-card .description h1 {
+            font-family: "Roboto";
+            line-height: 1em;
+            margin: 0 0 10px 0;
+        }
+        
+        .blog-card .description h2 {
+            color: #9b9b9b;
+            font-family: "Open Sans";
+            line-height: 1.2em;
+            text-transform: uppercase;
+            font-size: 1em;
+            font-weight: 400;
+            margin: 1.2% 0;
+        }
+        
+        .blog-card .description p {
+            position: relative;
+            margin: 0;
+            padding-top: 20px;
+        }
+        
+        .blog-card .description p:after {
+            content: "";
+            background: #75D13B;
+            height: 6px;
+            width: 40px;
+            /*POSITION*/
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+        
+        .blog-card .description a {
+            color: #75D13B;
+            margin-bottom: 10px;
+            float: right;
+        }
+        
+        .blog-card .description a:after {
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            content: "\f061";
+            font-family: FontAwesome;
+            margin-left: -10px;
+            opacity: 0;
+            vertical-align: middle;
+        }
+        
+        .blog-card .description a:hover:after {
+            margin-left: 5px;
+            opacity: 1;
+        }
+        
+        @media screen and (min-width: 600px) {
+            .blog-card {
+                height: 240px;
+                max-width: 700px;
+            }
+            .blog-card:hover .photo {
+                -webkit-transform: rotate(5deg) scale(1.3);
+                transform: rotate(5deg) scale(1.3);
+            }
+            .blog-card:hover.alt .photo {
+                -webkit-transform: rotate(-5deg) scale(1.3);
+                transform: rotate(-5deg) scale(1.3);
+            }
+            .blog-card.alt .details {
+                padding-left: 30px;
+            }
+            .blog-card.alt .description {
+                float: right;
+            }
+            .blog-card.alt .description:before {
+                -webkit-transform: skewX(5deg);
+                transform: skewX(5deg);
+                right: -15px;
+                left: inherit;
+            }
+            .blog-card.alt .photo {
+                float: right;
+            }
+            .blog-card .photo {
+                transition: all 0.5s ease;
+                -webkit-transition: all 0.5s ease;
+                float: left;
+                height: 100%;
+                width: 40%;
+            }
+            .blog-card .details {
+                width: 40%;
+            }
+            .blog-card .description {
+                float: left;
+                width: 60%;
+                z-index: 0;
+            }
+            .blog-card .description:before {
+                -webkit-transform: skewX(-5deg);
+                transform: skewX(-5deg);
+                content: "";
+                background: #fff;
+                width: 100%;
+                z-index: -1;
+                /*POSITION*/
+                position: absolute;
+                left: -15px;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="overlay-navigation">
+        <nav role="navigation">
+            <ul>
+                <li><a href="About_new.html" data-content="About SU-YO">關於 SU-YO</a></li>
+                <li><a href="new2.html" data-content="New Activity">New 活動</a></li>
+                <li><a href="index.html" data-content="Home">首頁</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="menu-trigger"></div>
+
+    <div class="open-overlay">
+        <span class="bar-top"></span>
+        <span class="bar-middle"></span>
+        <span class="bar-bottom"></span>
+    </div>
+    <!-- main -->
+    <div class="main">
+
+    </div>
+    <!--PEN CODE-->
+
+    <div class="blog-card">
+        <div class="photo photo1"></div>
+        <ul class="details">
+            <li class="tags">
+                <ul>
+                    <li><a href="Restaurant-North Taiwan.html">North</a></li>
+                    <li><a href="Restaurant-Central Taiwan.html">Central</a></li>
+                    <li><a href="Restaurant-South Taiwan.html">South</a></li>
+                    <li><a href="Restaurant-East Taiwan.html">East</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="description">
+            <h1>主題樂園</h1>
+            <h2>Restaurant</h2>
+            <p class="summary">「主題」意味由一個或幾個相關主題所主導，再配合不同的人工設計景觀和設施，讓遊客體驗到主題感覺。世界級的主題樂園，大多結合了多項主題樂園類型的元素，務求滿足不同類型遊客的需要。</p>
+            <a href="Restaurant-Central Taiwan.html">Distributed</a>
+        </div>
+    </div>
+    <div class="blog-card alt">
+        <div class="photo photo2"></div>
+        <ul class="details">
+            <li class="tags">
+                <ul>
+                    <li><a href="Paradise-North Taiwan.html">North</a></li>
+                    <li><a href="Paradise-Central Taiwan.html">Central</a></li>
+                    <li><a href="Paradise-South Taiwan.html">South</a></li>
+                    <li><a href="Paradise-East Taiwan.html">East</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="description">
+            <h1>主體餐廳</h1>
+            <h2>Paradise</h2>
+            <p class="summary">主題餐廳是指以一個或者多個主題為吸引標誌的餐廳，主題餐廳的目的是當顧客光顧時，能夠通過個人的體驗和聯想而進入一種相應的主題，比如重溫某一段歷史或瞭解一種陌生的文化等。</p>
+            <a href="Paradise-Central Taiwan.html">Distributed</a>
+        </div>
+    </div>
+
+
+    <div class="blog-card">
+        <div class="photo photo3"></div>
+        <ul class="details">
+            <li class="tags">
+                <ul>
+                    <li><a href="Factory-North Taiwan.html">North</a></li>
+                    <li><a href="Factory-Central Taiwan.html">Central</a></li>
+                    <li><a href="Factory-South Taiwan.html">South</a></li>
+                    <li><a href="Factory-East Taiwan.html">East</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="description">
+            <h1>觀光工廠</h1>
+            <h2>Factory</h2>
+            <p class="summary">「主題」意味由一個或幾個相關主題所主導，再配合不同的人工設計景觀和設施，讓遊客體驗到主題感覺。世界級的主題樂園，大多結合了多項主題樂園類型的元素，務求滿足不同類型遊客的需要。</p>
+            <a href="actory-Central Taiwan.html">Distributed</a>
+        </div>
+    </div>
+    <div class="blog-card alt">
+        <div class="photo photo4"></div>
+        <ul class="details">
+            <li class="tags">
+                <ul>
+                    <li><a href="View-North Taiwan.html">North</a></li>
+                    <li><a href="View-Central Taiwan.html">Central</a></li>
+                    <li><a href="View-South Taiwan.html">South</a></li>
+                    <li><a href="View-East Taiwan.html">East</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="description">
+            <h1>夜市、老街景點</h1>
+            <h2>View</h2>
+            <p class="summary">主題餐廳是指以一個或者多個主題為吸引標誌的餐廳，主題餐廳的目的是當顧客光顧時，能夠通過個人的體驗和聯想而進入一種相應的主題，比如重溫某一段歷史或瞭解一種陌生的文化等。</p>
+            <a href="View-Central Taiwan.html">Distributed</a>
+        </div>
+    </div>
+
+    <!--END PEN CODE-->
+
+    <!-- @end site__wrapper -->
+
+
+
+    <div class="buttons">
+        <a href="index.html" data-content="">
+            <button class="blob-btn">
+                        INDEX SU-YO
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </button>
+        </a>
+        <br/>
+        <a href="About_new.html" data-content="">
+            <button class="blob-btn">
+                        About SU-YO                       
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </button>
+        </a>
+    </div>
+    <!-- section3 end -->
+
+
+    <!-- footer -->
+    <div class="footer">
+
+    </div>
+    <!-- footer end-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('.open-overlay').click(function() {
+            var overlay_navigation = $('.overlay-navigation'),
+                nav_item_1 = $('nav li:nth-of-type(1)'),
+                nav_item_2 = $('nav li:nth-of-type(2)'),
+                nav_item_3 = $('nav li:nth-of-type(3)'),
+                nav_item_4 = $('nav li:nth-of-type(4)'),
+                nav_item_5 = $('nav li:nth-of-type(5)'),
+                top_bar = $('.bar-top'),
+                middle_bar = $('.bar-middle'),
+                bottom_bar = $('.bar-bottom');
+
+            overlay_navigation.toggleClass('overlay-active');
+            if (overlay_navigation.hasClass('overlay-active')) {
+
+                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+                nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+            } else {
+                top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+                middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+                bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+                nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+                nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+                nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+                nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+                nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+            }
+        })
+    </script>
+</body>
+
+</html>
