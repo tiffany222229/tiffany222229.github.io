@@ -14,6 +14,7 @@
     <link href="css/card.css" rel="stylesheet">
     <link href="css/cover.css" rel="stylesheet">
     <link href="css/forrt.css" rel="stylesheet">
+    <link href="css/abcd.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -68,29 +69,29 @@
         <!--start button, nothing above this is necessary -->
         <div class="svg-wrapper">
             <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
-        <rect id="shape" height="40" width="150" />
-        <div id="text">
-          <a href="Restaurant-North Taiwan.html"><span class="spot"></span>North</a>
-        </div>
-      </svg>
-        </div>
-        <!--Next button -->
-        <div class="svg-wrapper">
-            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
-        <rect id="shape" height="40" width="150" />
-        <div id="text">
-          <a href="Restaurant-Central Taiwan.html"><span class="spot"></span>Central</a>
-        </div>
-      </svg>
+                <rect id="shape" height="40" width="150" />
+                <div id="text">
+                    <a href="Restaurant-North Taiwan.html"><span class="spot"></span>North</a>
+                </div>
+            </svg>
         </div>
         <!--Next button -->
         <div class="svg-wrapper">
             <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
-        <rect id="shape" height="40" width="150" />
-        <div id="text">
-          <a href="Restaurant-South Taiwan.html"><span class="spot"></span>South</a>
+                <rect id="shape" height="40" width="150" />
+                <div id="text">
+                    <a href="Restaurant-Central Taiwan.html"><span class="spot"></span>Central</a>
+                </div>
+            </svg>
         </div>
-      </svg>
+        <!--Next button -->
+        <div class="svg-wrapper">
+            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                <rect id="shape" height="40" width="150" />
+                <div id="text">
+                    <a href="Restaurant-South Taiwan.html"><span class="spot"></span>South</a>
+                </div>
+            </svg>
         </div>
         <!--End button -->
 
@@ -98,17 +99,19 @@
 
 
     <div>
-
-        <div id="carousel">
-            <figure id="spinner">
-                <img src="img/Restaurant-East Taiwan/馬可樓-官網-1台東.jpg" alt>
-                <img src="img/Restaurant-East Taiwan/好望角-fb-1花.jpg" alt>
-                <img src="img/Restaurant-East Taiwan/星星-FB-2台東.jpg" alt>
-                <img src="img/Restaurant-East Taiwan/藍海-fb-12花.jpg" alt>
-                <img src="img/Restaurant-East Taiwan/好望角-fb-2花.jpg" alt>
-                <img src="img/Restaurant-East Taiwan/星星-FB-1台東.jpg" alt>
-            </figure>
-        </div>
+        <section class="row">
+            <div class="nine columns">
+                <div class="coverflow top10 bot10">
+                    <a class="prev-arrow"></a>
+                    <a href=""><img src="img/Restaurant-East Taiwan/馬可樓-官網-1台東.jpg" class="coverflow__image" /></a>
+                    <a href=""><img src="img/Restaurant-East Taiwan/好望角-fb-1花.jpg" class="coverflow__image" /></a>
+                    <a href=""><img src="img/Restaurant-East Taiwan/星星-FB-2台東.jpg" class="coverflow__image" /></a>
+                    <a href=""><img src="img/Restaurant-East Taiwan/藍海-fb-12花.jpg" class="coverflow__image" /></a>
+                    <a href=""><img src="img/Restaurant-East Taiwan/星星-FB-1台東.jpg" class="coverflow__image" /></a>
+                    <a class="next-arrow"></a>
+                </div>
+            </div>
+        </section>
 
         <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
         <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
@@ -116,17 +119,20 @@
         <div>
             <ul class="card-list">
                 <li class="card">
-                    <a class="card-image" href="https://www.facebook.com/%E6%98%9F%E6%98%9F%E9%83%A8%E8%90%BD%E6%99%AF%E8%A7%80%E5%92%96%E5%95%A1-181799101867492/" target="_blank" style="background-image: url(img/星星-FB-1台東.jpg);" data-image-full="img/星星-FB-1台東.jpg">
+                    <a class="card-image" href="https://www.facebook.com/%E6%98%9F%E6%98%9F%E9%83%A8%E8%90%BD%E6%99%AF%E8%A7%80%E5%92%96%E5%95%A1-181799101867492/"
+                        target="_blank" style="background-image: url(img/星星-FB-1台東.jpg);" data-image-full="img/星星-FB-1台東.jpg">
                         <img src="img/星星-FB-1台東.jpg" alt="星星部落景觀餐廳" />
                     </a>
-                    <a class="card-description" href="https://www.facebook.com/%E6%98%9F%E6%98%9F%E9%83%A8%E8%90%BD%E6%99%AF%E8%A7%80%E5%92%96%E5%95%A1-181799101867492/" target="_blank">
+                    <a class="card-description" href="https://www.facebook.com/%E6%98%9F%E6%98%9F%E9%83%A8%E8%90%BD%E6%99%AF%E8%A7%80%E5%92%96%E5%95%A1-181799101867492/"
+                        target="_blank">
                         <h2>星星部落景觀餐廳</h2>
                         <p>台東縣卑南鄉富源村8鄰富源116-3號</p>
                     </a>
                 </li>
 
                 <li class="card">
-                    <a class="card-image" href="https://www.facebook.com/wwwsl600/" target="_blank" style="background-image: url(img/好望角-fb-3花.jpg);" data-image-full="img/好望角-fb-3花.jpg">
+                    <a class="card-image" href="https://www.facebook.com/wwwsl600/" target="_blank" style="background-image: url(img/好望角-fb-3花.jpg);"
+                        data-image-full="img/好望角-fb-3花.jpg">
                         <img src="img/好望角-fb-3花.jpg" alt="好望角景觀餐廳" />
                     </a>
                     <a class="card-description" href="https://www.facebook.com/wwwsl600/" target="_blank">
@@ -136,7 +142,8 @@
                 </li>
 
                 <li class="card">
-                    <a class="card-image" href="https://www.facebook.com/OceanBlueYummy/" target="_blank" style="background-image: url(img/藍海-fb-3花.jpg);" data-image-full="img/藍海-fb-3花.jpg">
+                    <a class="card-image" href="https://www.facebook.com/OceanBlueYummy/" target="_blank" style="background-image: url(img/藍海-fb-3花.jpg);"
+                        data-image-full="img/藍海-fb-3花.jpg">
                         <img src="img/藍海-fb-3花.jpg" alt="Ocean Blue藍海觀景餐廳" />
                     </a>
                     <a class="card-description" href="https://www.facebook.com/OceanBlueYummy/" target="_blank">
@@ -183,6 +190,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="js/bootstrap.min.js"></script>
+            <script src="js/abcd.min.js"></script>
             <script>
                 var angle = 0;
 
@@ -197,7 +205,7 @@
                 }
 
 
-                $('.open-overlay').click(function() {
+                $('.open-overlay').click(function () {
                     var overlay_navigation = $('.overlay-navigation'),
                         nav_item_1 = $('nav li:nth-of-type(1)'),
                         nav_item_2 = $('nav li:nth-of-type(2)'),
@@ -238,7 +246,7 @@
                 // - (event listeners, forEach loop)
 
                 // wait for the entire page to finish loading
-                window.addEventListener('load', function() {
+                window.addEventListener('load', function () {
 
                     // setTimeout to simulate the delay from a real page load
                     setTimeout(lazyLoad, 1000);
@@ -249,7 +257,7 @@
                     var card_images = document.querySelectorAll('.card-image');
 
                     // loop over each card image
-                    card_images.forEach(function(card_image) {
+                    card_images.forEach(function (card_image) {
                         var image_url = card_image.getAttribute('data-image-full');
                         var content_image = card_image.querySelector('img');
 
@@ -257,7 +265,7 @@
                         content_image.src = image_url;
 
                         // listen for load event when the new photo is finished loading
-                        content_image.addEventListener('load', function() {
+                        content_image.addEventListener('load', function () {
                             // swap out the visible background image with the new fully downloaded photo
                             card_image.style.backgroundImage = 'url(' + image_url + ')';
                             // add a class to remove the blur filter to smoothly transition the image change
